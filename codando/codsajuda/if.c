@@ -12,7 +12,10 @@
         char nomeb[50] = "portoalegre, barretos, araguainha, bora";
         float mediaa;
         float mediab;
-        
+        float pibpercaptaa;
+        float pibpercaptab;
+        float densidadea;
+        float densidadeb;
         printf("Desafio super trunfo\n");
         
         printf("digite o nome da cidade\n");
@@ -33,9 +36,11 @@
         mediaa = (populacaoa + areaa + piba + PontosTuristicos) / 4;
         printf("o poder é: %.2f\n", mediaa);
         
-        printf("A densidade populacional é:%.2f\n", populacaoa / areaa);
+        densidadea = (populacaoa / areaa);
+        printf("A densidade populacional é:%.2f\n", densidadea);
         
-        printf("o pib per capta é:%.2f\n", piba / populacaoa);
+        pibpercaptaa = (piba / populacaoa);
+        printf("o pib per capta é:%.2f\n", pibpercaptaa);
         
         printf("Digite o nome de outra cidade\n");
         scanf("%s", nomeb);
@@ -55,28 +60,23 @@
         mediab = (populacaob + areab + pibb + PontosTuristicos) / 4;
         printf("o poder é: %.2f\n", mediab);
         
-        printf("A densidade populacional é:%.2f\n", populacaob / areab);
+        densidadeb = (populacaob / areab);
+        printf("A densidade populacional é:%.2f\n", densidadeb);
         
-        printf("o pib per capta é:%.2f\n", pibb / populacaob);
-        
-        if(populacaoa > populacaob) {
-            printf("jogador 1 com maior população\n", nomea);
+        pibpercaptab = (pibb / populacaob);
+        printf("o pib per capta é:%.2f\n", pibpercaptab);
+    
+        if(densidadea < densidadeb){
+            printf("1x0");
+            if(mediaa > mediab){
+                printf("2X0");
+            }else printf("0x1");
+
         }else{
-            printf("Jogador 2 com maior população", nomeb);
+            printf("0X2");
         }
-        
-        if(mediaa > mediab){
-            printf("Jogador 1 tem poder superior ao jogador 2\n");
-        }else{
-            printf("Jogador 2 tem poder superior ao jogador 1");
-        }
-        
-        
-        if (populacaoa / areaa < populacaob / areab) {
-            printf("densidade do jogador 1 menor");
-        } else {
-            printf("densidade do jogador 2 menor");
-        }
-        
-        return 0;
-}
+
+
+
+    return 0;
+    }
