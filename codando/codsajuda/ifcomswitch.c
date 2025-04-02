@@ -118,7 +118,7 @@ int main(){
             
             break;
         case 2:
-            printf("Regras: O jogador com a maior pontuação vence menos no caso de densidade");
+            printf("Regras: O jogador com a maior pontuação vence, menos no caso de densidade, os numeros podem ir de 1 a 1000.");
             break;
         case 3:
             printf("Ate mais, volte sempre!!");
@@ -127,6 +127,6 @@ int main(){
         printf("opção invalida");
             break;
         }
-
+        return 0;
     }
 
